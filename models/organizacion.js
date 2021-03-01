@@ -17,3 +17,5 @@ class Organizacion {
     this.correo = correo; // correo electrónico
   }
 }
+
+module.exports = Organizacion;
