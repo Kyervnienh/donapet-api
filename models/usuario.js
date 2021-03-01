@@ -13,3 +13,5 @@ class Usuario {
         this.rol = rol; // rol del usuario (donador, admin)
     }
 }
+
+module.exports = Usuario;
