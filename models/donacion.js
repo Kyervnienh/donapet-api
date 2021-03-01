@@ -7,4 +7,6 @@ class Donacion {
       this.cantidad = cantidad; // cantidad de la donación
       this.status = status; // estado de la donacion
     }
-  }
+}
+
+module.exports = Donacion;
