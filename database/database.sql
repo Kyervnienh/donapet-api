@@ -137,3 +137,22 @@ INSERT INTO donacion (id_usuario, id_organizacion, cantidad, estatus) VALUES (15
 INSERT INTO donacion (id_usuario, id_organizacion, cantidad, estatus) VALUES (7, 2, 890, "APROBADO");
 
 INSERT INTO donacion (id_usuario, id_organizacion, cantidad) VALUES (19, 4, 678);
+
+-- Queries
+
+/*
+
+SELECT * FROM usuario;
+SELECT * FROM organizacion;
+SELECT * FROM donacion;
+
+SELECT * FROM donacion WHERE estatus = 'APROBADO';
+SELECT nombre, ocupacion FROM usuario;
+
+SELECT a.nombre, d.cantidad, o.nombre as organizacion
+FROM usuario a
+    INNER JOIN donacion d ON a.id_usuario = d.id_usuario
+    INNER JOIN organizacion o ON a.id_usuario = d.id_usuario
+ORDER BY nombre;
+
+*/
