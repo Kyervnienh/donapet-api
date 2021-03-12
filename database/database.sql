@@ -8,11 +8,23 @@ CREATE TABLE usuario
 (
 	id_usuario INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(30) NOT NULL,
+    apellido VARCHAR (30) NOT NULL,
     edad INT(2) NOT NULL,
     correo VARCHAR(40) NOT NULL,
+    password VARCHAR(20) NOT NULL,
     telefono INT(10) NOT NULL,
     ocupacion VARCHAR(20) NOT NULL,
     rol VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE organizacion 
+(
+	id_organizacion INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(30) NOT NULL,
+    direccion VARCHAR(40) NOT NULL,
+    telefono INT(10) NOT NULL,
+    representante VARCHAR(30) NOT NULL,
+    correo VARCHAR(40) NOT NULL
 );
 
 CREATE TABLE donacion
@@ -26,57 +38,49 @@ CREATE TABLE donacion
     FOREIGN KEY(id_organizacion) REFERENCES organizacion(id_organizacion)
 );
 
-CREATE TABLE organizacion 
-(
-	id_organizacion INT PRIMARY KEY AUTO_INCREMENT,
-    nombre VARCHAR(30) NOT NULL,
-    direccion VARCHAR(40) NOT NULL,
-    telefono INT(10) NOT NULL,
-    representante VARCHAR(30) NOT NULL,
-    correo VARCHAR(40) NOT NULL
-);
+
 
 -- Inserting data
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Alberto Martinez", 24, "alberto@mail.com", 123456789, "Dentista", "Administrador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Alberto","Martinez", 24, "alberto@mail.com","hUi9N9AK93", 123456789, "Dentista", "Administrador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Rodrigo Alcudia", 32, "rodrigo@mail.com", 987654321, "Contador", "Administrador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Rodrigo","Alcudia", 32, "rodrigo@mail.com","iKDp9nLHL7", 987654321, "Contador", "Administrador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Roberto Corro", 26, "roberto@mail.com", 987834321, "Programador", "Administrador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Roberto","Corro", 26, "roberto@mail.com","UjPJgc5QQ31E", 987834321, "Programador", "Administrador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Cesar Rayon", 29, "cesar@mail.com", 926384672, "Matematico", "Administrador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Cesar","Rayon", 29, "cesar@mail.com","nVNwCbmuaCol", 926384672, "Matematico", "Administrador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Darwin Altamirano", 33, "darwin@mail.com", 273894615, "Administrador", "Administrador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Darwin","Altamirano", 33, "darwin@mail.com","lMuwZsD4GQNJ", 273894615, "Administrador", "Administrador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Siria Rodriguez", 23, "siria@mail.com", 827367819, "Diseñadora", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Siria","Rodriguez", 23, "siria@mail.com","jzG0itkQYxWs", 827367819, "Diseñadora", "donador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Alfredo Dominguez", 19, "alfredo@mail.com", 427367819, "Estudiante", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Alfredo","Dominguez", 19, "alfredo@mail.com","g7JOYvuRF0ez", 427367819, "Estudiante", "donador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Erika Rosas", 36, "erika@mail.com", 917362319, "Medico", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Erika","Rosas", 36, "erika@mail.com","nqknP3vJslZ8", 917362319, "Medico", "donador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Melissa Damian", 27, "melissa@mail.com", 928938716, "Contador", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Melissa","Damian", 27, "melissa@mail.com","tWE8tWLTssaR", 928938716, "Contador", "donador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Diego Lopez", 30, "diego@mail.com", 927516728, "Abogado", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Diego","Lopez", 30, "diego@mail.com","ryynwwCvWVbH", 927516728, "Abogado", "donador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Reyna Muñoz", 20, "reyna@mail.com", 119283647, "Estudiante", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Reyna","Muñoz", 20, "reyna@mail.com","QzPxKUwIIuMp", 119283647, "Estudiante", "donador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Jose Alvarez", 26, "jose@mail.com", 918274681, "Fisico", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Jose","Alvarez", 26, "jose@mail.com","qUrixdNLV5xj", 918274681, "Fisico", "donador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Eduardo Cardenas", 24, "eduardo@mail.com", 278376109, "Biologo", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Eduardo","Cardenas", 24, "eduardo@mail.com","KPj50GHJ2thQ", 278376109, "Biologo", "donador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Monica Carvajal", 28, "monica@mail.com", 394871678, "Nutriologa", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Monica","Carvajal", 28, "monica@mail.com","vOGUg8vTSOEW", 394871678, "Nutriologa", "donador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Daniel Moreno", 39, "daniel@mail.com", 482681782, "Mecanico", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Daniel","Moreno", 39, "daniel@mail.com","784CzEoKB1sU", 482681782, "Mecanico", "donador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Aylin Salvadory", 25, "aylin@mail.com", 192873651, "Chef", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Aylin","Salvadory", 25, "aylin@mail.com","cjeVFBynZqS1", 192873651, "Chef", "donador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Noemi Pizarro", 34, "noemi@mail.com", 198267189, "Abogado", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Noemi","Pizarro", 34, "noemi@mail.com","q6BgIH9KDUbL", 198267189, "Abogado", "donador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Angel Ramirez", 38, "angel@mail.com", 409189287, "Ingeniero", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Angel","Ramirez", 38, "angel@mail.com","h2wMTXiJ63BA", 409189287, "Ingeniero", "donador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Enrique Vera", 27, "enrique@mail.com", 782736819, "Psicologo", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Enrique","Vera", 27, "enrique@mail.com","7hhk4wmTYcZq", 782736819, "Psicologo", "donador");
 
-INSERT INTO usuario (nombre, edad, correo, telefono, ocupacion, rol) VALUES ("Barry Allen", 26, "barry@mail.com", 928376182, "Forense", "donador");
+INSERT INTO usuario (nombre, apellido, edad, correo, password, telefono, ocupacion, rol) VALUES ("Barry","Allen", 26, "barry@mail.com","EzOIe5TjdAXU", 928376182, "Forense", "donador");
 
 INSERT INTO organizacion (nombre, direccion, telefono, representante, correo) VALUES ("STARPET", "Calle 171C N. 326, Mérida, Yucatan", 928718926, "Caitlin Snow", "starpet@mail.com");
 
