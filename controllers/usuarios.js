@@ -1,35 +1,62 @@
-const Usuario = require('../models/usuario');
+const Usuario = require('../models/usuario')
 
-function crearUsuario(req, res) {
-  var usuario = new Usuario(req.body); // Creando un usuario y respondiendolo
-  res.status(201).send(usuario);
+// función para crear un usuario
+function crearUsuario(req, res,next) {
+  const usr = Usuario.build(req.body)
+
+  usr.save().then(user => {
+    return res.status(201).json(user.toAuthJSON())
+  }).catch(next);
 }
 
+// función para obtener todos los usuarios
 function obtenerUsuarios(req, res) {
-  var usuario1 = new Usuario(1, "Kevin", "Lopez", "kevin@mail.com");
-  var usuario2 = new Usuario(2, "Jesrig", "Pineda", "jesrig@mail.com"); // Simulando dos usuarios y respondiendolos
-  res.send([usuario1, usuario2]);
+  Usuario.findAll().then(users => {
+    return res.json(users)
+  }).catch(error => {
+    return res.sendStatus(401)
+  })
 }
 
-function modificarUsuario(req, res) {
-  var usuario1 = new Usuario(
-    req.params.id,
-    "Raquel",
-    "Vazquez",
-    "raquel@mail.com"
-  );
-  var modificaciones = req.body; // simulando un usuario existente que se modifica
-  usuario1 = { ...usuario1, ...modificaciones };
-  res.send(usuario1);
+// función para obtener un usuario por id
+function obtenerUsuario(req, res) {
+  Usuario.findOne({where: {id_usuario: req.params.id_usuario}}).then(user => {
+    return res.json(user)
+  }).catch(error => {
+    return res.sendStatus(401)
+  })
 }
 
+// función para modificar un usuario
+function modificarUsuario(req, res,next) {
+  const usr = Usuario.create({
+    id : req.params.id,
+    ...req.body
+  })
+
+  usr.save().then(user => {
+    return res.status(201).json(user.toAuthJSON())
+  }).catch(next);
+}
+
+// función para eliminar un usuario
 function eliminarUsuario(req, res) {
-  res.status(200).send(`Usuario ${req.params.id} eliminado`); // se simula una eliminación de usuario, regresando un 200
+  const usr = Usuario.findByPk(req.usuario.id);
+  if (usr === null){
+    return res.sendStatus(401)
+  } else {
+    usr.destroy().then(usr => {
+      return res.status(200)
+    }).catch(err => {
+      return res.sendStatus(500)
+    })
+  }
 }
 
 module.exports = {
   crearUsuario,
   obtenerUsuarios,
+  obtenerUsuario,
   modificarUsuario,
   eliminarUsuario,
 };
