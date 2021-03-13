@@ -1,12 +1,24 @@
-/** Clase que representa una donacion */
-class Donacion {
-    constructor(id_donacion, id_donador, id_organizacion, cantidad, status) {
-      this.id_donacion = id_donacion; // número de indentificación de la donacion
-      this.id_donador = id_donador; // número de indentificación del donador
-      this.id_organizacion = id_organizacion; // número de indentificación de la organización
-      this.cantidad = cantidad; // cantidad de la donación
-      this.status = status; // estado de la donacion
-    }
-}
+const { Sequelize, DataTypes } = require('sequelize');
+const sequelize = new Sequelize('mysql::memory:');
 
+const Usuario = require('./usuario');
+const Organizacion = require('./organizacion');
+
+const Donacion  = sequelize.define('Donacion', {
+  id_donacion: { // número de indentificación de la donacion
+    type: DataTypes.INTEGER,
+    primaryKey : true,
+    autoIncrement: true
+  },
+  //donador: DataTypes.INTEGER,  // número de indentificación del donador
+  //organizacion: DataTypes.INTEGER, // número de indentificación de la organización
+  cantidad: DataTypes.INTEGER, // cantidad de la donación
+  estatus: DataTypes.STRING, // estado de la donacion
+},{ tableName: 'donacion'});
+
+//Donacion.hasOne(Usuario);
+//Donacion.hasOne(Organizacion);
+// Donacion.hasOne(organizacion,{foreignKey : 'id_organizacion'})
+
+console.log(Donacion === sequelize.models.Donacion);
 module.exports = Donacion;
