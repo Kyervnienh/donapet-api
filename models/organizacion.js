@@ -1,21 +1,22 @@
-/** Clase que representa una organización */
+const { Sequelize, DataTypes } = require('sequelize');
+const sequelize = new Sequelize('mysql::memory:');
 
-class Organizacion {
-  constructor(
-    id_organizacion,
-    nombre,
-    direccion,
-    telefono,
-    representante,
-    correo
-  ) {
-    this.id_organizacion = id_organizacion; // número de indentificación de la organización
-    this.nombre = nombre; // nombre de la organización
-    this.direccion = direccion; // dirección
-    this.telefono = telefono; // número de telefono
-    this.representante = representante; // representante de la organización
-    this.correo = correo; // correo electrónico
-  }
-}
+const Organizacion = sequelize.define(
+  'Organizacion',
+  {
+    id_organizacion: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    nombre: DataTypes.STRING,
+    direccion: DataTypes.STRING,
+    telefono: DataTypes.INTEGER,
+    representante: DataTypes.STRING,
+    correo: DataTypes.STRING,
+  },
+  { tableName: 'organizacion' }
+);
 
+// exportamos el modelo.
 module.exports = Organizacion;
