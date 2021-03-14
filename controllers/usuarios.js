@@ -20,7 +20,7 @@ function obtenerUsuarios(req, res) {
 
 // función para obtener un usuario por id
 function obtenerUsuario(req, res) {
-  Usuario.findOne({where: {id_usuario: req.params.id_usuario}}).then(user => {
+  Usuario.findByPk(req.params.id).then(user => {
     return res.json(user)
   }).catch(error => {
     return res.sendStatus(401)
@@ -29,24 +29,20 @@ function obtenerUsuario(req, res) {
 
 // función para modificar un usuario
 function modificarUsuario(req, res,next) {
-  const usr = Usuario.create({
-    id : req.params.id,
-    ...req.body
-  })
-
-  usr.save().then(user => {
-    return res.status(201).json(user.toAuthJSON())
+  Usuario.update(req.body, {where: { id_usuario: req.params.id}})
+  .then(user => {
+    return res.sendStatus(201).json(user.toAuthJSON())
   }).catch(next);
 }
 
 // función para eliminar un usuario
 function eliminarUsuario(req, res) {
-  const usr = Usuario.findByPk(req.usuario.id);
+  const usr = Usuario.findByPk(req.params.id);
   if (usr === null){
     return res.sendStatus(401)
   } else {
-    usr.destroy().then(usr => {
-      return res.status(200)
+    Usuario.destroy({where: {id_usuario: req.params.id}}).then(() => {
+      return res.sendStatus(200)
     }).catch(err => {
       return res.sendStatus(500)
     })
