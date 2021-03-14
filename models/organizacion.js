@@ -23,7 +23,7 @@ const Organizacion = sequelize.define(
     representante: DataTypes.STRING,
     correo: DataTypes.STRING,
   },
-  { tableName: 'organizacion' }
+  { timestamps: false, tableName: 'organizacion' }
 );
 
 // exportamos el modelo.
