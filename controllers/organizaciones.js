@@ -4,12 +4,12 @@ const Organizacion = require('../models/organizacion');
  * Funcion para crear una nueva organizacion.
  */
 function crearOrganizacion(req, res, next) {
-  var organizacion = Organizacion.build(req.body);
+  const org = Organizacion.build(req.body);
 
-  organizacion
+  org
     .save()
     .then((organizacion) => {
-      return res.status(200).json(organizacion.toAuthJSON());
+      return res.status(201).send(organizacion);
     })
     .catch(next);
 }
@@ -32,7 +32,7 @@ function consultarOrganizaciones(req, res) {
  */
 
 function consultarOrganizacion(req, res) {
-  Organizacion.findOne({})
+  Organizacion.findByPk(req.params.id)
     .then((organizacion) => {
       return res.json(organizacion);
     })
@@ -46,14 +46,9 @@ function consultarOrganizacion(req, res) {
  */
 
 function modificarOrganizacion(req, res, next) {
-  const organizacion = Organizacion.create({
-    id: req.params.id,
-    ...req.body,
-  });
-  organizacion
-    .save()
+  Organizacion.update(req.body, { where: { id_organizacion: req.params.id } })
     .then((organizacion) => {
-      return res.status(201).json(organizacion.toAuthJSON());
+      return res.status(201).send(organizacion);
     })
     .catch(next);
 }
@@ -62,17 +57,16 @@ function modificarOrganizacion(req, res, next) {
  * Funcion para eliminar una organizacion
  */
 function eliminarOrganizacion(req, res) {
-  const organizacion = Organizacion.findByPk(req.organizacion.id);
+  const organizacion = Organizacion.findByPk(req.params.id);
   if (organizacion === null) {
     return res.sendStatus(401);
   } else {
-    organizacion
-      .destroy()
-      .then((organizacion) => {
-        return res.status(200);
+    Organizacion.destroy({ where: { id_organizacion: req.params.id } })
+      .then(() => {
+        return res.sendStatus(200);
       })
       .catch((err) => {
-        return res.status(500);
+        return res.sendStatus(500);
       });
   }
 }
