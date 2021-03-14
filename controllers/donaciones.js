@@ -9,7 +9,7 @@ function crearDonacion(req, res, next) {
   const donacion = Donacion.build(req.body);
 
   donacion.save().then(donativo => {
-    return res.status(200).json(donativo.toAuthJSON())
+    return res.status(200).json(donativo)
   }).catch(next);
 }
 
@@ -34,12 +34,11 @@ function consultarDonaciones(req, res) {
  */
 
 function consultarDonacion(req, res) {
-  Donacion.findOne({
-  }).then(donativo => {
-    return res.json(donativo)
+  Donacion.findByPk(req.params.id).then(user => {
+    return res.json(user)
   }).catch(error => {
     return res.sendStatus(401)
-  })  
+  })
 }
 
 /**
@@ -49,12 +48,9 @@ function consultarDonacion(req, res) {
  */
 
 function modificarDonacion(req, res, next ) {
-  const donacion = Donacion.create({
-    id : req.params.id,
-    ...req.body
-  })
-  donacion.save().then(donativo => {
-    return res.status(201).json(donativo.toAuthJSON())
+  Donacion.update(req.body, {where: { id_donacion: req.params.id}})
+  .then(donativo => {
+    return res.sendStatus(200).json(donativo)
   }).catch(next);
 }
 
@@ -64,12 +60,12 @@ function modificarDonacion(req, res, next ) {
  * @param {*} res
  */
 function cancelarDonacion(req, res) {
-  const donacion = Donacion.findByPk(req.donacion.id);
+  const donacion = Donacion.findByPk(req.params.id);
   if (donacion === null){
     return res.sendStatus(401)
   } else {
-    donacion.destroy().then(donacion => {
-      return res.status(200)
+    Donacion.destroy({where: {id_donacion: req.params.id}}).then(() => {
+      return res.sendStatus(200)
     }).catch(err => {
       return res.sendStatus(500)
     })

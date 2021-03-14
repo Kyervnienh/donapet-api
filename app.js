@@ -13,22 +13,14 @@ app.use(bodyParser.json());
 
 // **************** COnfiguración de MySQL ********************
 
-const Sequelize = require('sequelize')
-
-const sequelize = new Sequelize('bvjvt3algliwhdhkghed', 'ugmtfah9vxn9hbsq', '8Wuhw88GLlEDIRA6R3nW', {
-	host: 'bvjvt3algliwhdhkghed-mysql.services.clever-cloud.com',
-	dialect: 'mysql',
-})
-
-// Verificamos que la conexion funcione
-sequelize.authenticate()
-.then(() => {
-	console.log("It's Alive!!!")
-})
-.catch(err => {
-	console.log('No se conecto')
-})
-
+// // Verificamos que la conexion funcione
+// sequelize.authenticate()
+// .then(() => {
+// 	console.log("It's Alive!!!")
+// })
+// .catch(err => {
+// 	console.log('No se conecto')
+// })
 
 
 // Agregamos el código de nuestro router (routes/index.js)
