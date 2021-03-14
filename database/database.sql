@@ -11,10 +11,11 @@ CREATE TABLE usuario
     apellido VARCHAR (30) NOT NULL,
     edad INT(2) NOT NULL,
     correo VARCHAR(40) NOT NULL,
-    password VARCHAR(20) NOT NULL,
+    password VARCHAR(1024) NOT NULL,
     telefono INT(10) NOT NULL,
     ocupacion VARCHAR(20) NOT NULL,
-    rol VARCHAR(30) NOT NULL
+    rol VARCHAR(30) NOT NULL,
+    salt VARCHAR(1024)
 );
 
 CREATE TABLE organizacion 
