@@ -1,5 +1,13 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('mysql::memory:');
+const sequelize = new Sequelize(
+  'bvjvt3algliwhdhkghed',
+  'ugmtfah9vxn9hbsq',
+  '8Wuhw88GLlEDIRA6R3nW',
+  {
+    host: 'bvjvt3algliwhdhkghed-mysql.services.clever-cloud.com',
+    dialect: 'mysql',
+  }
+);
 
 const Organizacion = sequelize.define(
   'Organizacion',
