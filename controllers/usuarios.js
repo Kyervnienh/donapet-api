@@ -58,7 +58,7 @@ function eliminarUsuario(req, res) {
 }
 
 // función para iniciar sesión
-async function iniciarSesion(req, res, next){
+function iniciarSesion(req, res, next){
   if (!req.body.correo) {
     return res.status(422).json({ errors: { correo: "no puede estar vacío" } }); // se comprueba que el campo "correo" no esté vacío
   }
@@ -71,9 +71,8 @@ async function iniciarSesion(req, res, next){
     if (err) { return next(err); }
 
     if (user) {
-      res.json('todo corresto')
-      /* user.token = user.generarJWT();
-      return res.json({ user: user.toAuthJSON() }); */
+      user.token = user.generarJWT();
+      return res.json({ user: user.toAuthJSON() });
     } else {
       return res.status(422).json(info);
     }
