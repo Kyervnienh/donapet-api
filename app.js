@@ -10,20 +10,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+require('./config/passport');
 
-// **************** COnfiguración de MySQL ********************
-
-// // Verificamos que la conexion funcione
-// sequelize.authenticate()
-// .then(() => {
-// 	console.log("It's Alive!!!")
-// })
-// .catch(err => {
-// 	console.log('No se conecto')
-// })
-
-
-// Agregamos el código de nuestro router (routes/index.js)
 app.use('/v1', require('./routes'));
 
 // Manejando los errores 404
