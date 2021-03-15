@@ -266,7 +266,7 @@ En este caso cambiamos el estatus y la organización a la cual se hara la donaci
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/modelo_relacional.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/develop/src/assets/PUTDONACIONES.png" alt="entidad relacion" width="50%" height="70%" />
     <p></p>
 </div>
 
@@ -274,7 +274,7 @@ En este caso cambiamos el estatus y la organización a la cual se hara la donaci
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/modelo_relacional.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/develop/src/assets/PUTRESULT.png" alt="entidad relacion" width="50%" height="70%" />
     <p></p>
 </div>
 
@@ -304,7 +304,7 @@ Pasos:
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/modelo_relacional.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/develop/src/assets/DELETERESULT.png" alt="entidad relacion" width="50%" height="70%" />
     <p></p>
 </div>
 
