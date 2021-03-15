@@ -98,7 +98,7 @@ router.post('/', crearDonacion);
  *            schema:
  *              $ref: '#/components/schemas/Donaciones'
  *      401:
- *        description: Tnot found
+ *        description: not found
  *      500:
  *        description: Some error happened
  */
@@ -109,11 +109,11 @@ router.put('/:id', modificarDonacion);
  * @swagger
  * /v1/donaciones:
  *  get:
- *    summary: creacion de una nueva donacion
+ *    summary: Listado de donaciones
  *    tags: [Donaciones]
  *    responses:
  *       200:
- *         description: Lista de dnonaciones
+ *         description: Lista de donaciones
  *         content:
  *           application/json:
  *             schema:
