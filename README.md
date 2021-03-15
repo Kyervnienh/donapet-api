@@ -348,7 +348,7 @@ Para poder visualizar la documentación solo es necesario entrar al siguiente en
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/develop/src/assets/DELETERESULT.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/main/src/assets/swaggers.png" width="50%" height="70%" />
     <p></p>
 </div>
 
