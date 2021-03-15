@@ -5,10 +5,15 @@ const secret = require('../config').secret;
 
 // Configuración de Sequelize
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('bvjvt3algliwhdhkghed', process.env.MYSQL_USER, process.env.MYSQL_PASSWORD, {
-	host: process.env.MYSQL_HOST,
-	dialect: 'mysql',
-})
+const sequelize = new Sequelize(
+  process.env.MYSQL_DB,
+  process.env.MYSQL_USER,
+  process.env.MYSQL_PASSWORD,
+  {
+    host: process.env.MYSQL_HOST,
+    dialect: 'mysql',
+  }
+);
 
 const Usuario = sequelize.define('usuario', {
     id_usuario: {                 // número de identificación del usuario

@@ -1,10 +1,10 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = new Sequelize(
-  'bvjvt3algliwhdhkghed',
-  'ugmtfah9vxn9hbsq',
-  '8Wuhw88GLlEDIRA6R3nW',
+  process.env.MYSQL_DB,
+  process.env.MYSQL_USER,
+  process.env.MYSQL_PASSWORD,
   {
-    host: 'bvjvt3algliwhdhkghed-mysql.services.clever-cloud.com',
+    host: process.env.MYSQL_HOST,
     dialect: 'mysql',
   }
 );
