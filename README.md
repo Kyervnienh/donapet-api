@@ -324,10 +324,10 @@ Endpoint para la la tabla Usuarios:
 
 Endpoint para la la tabla Organizaciones:
 
-**GET** http://localhost:3000/v1/organizaciones/
-**POST** http://localhost:3000/v1/organizaciones/
-**PUT** http://localhost:3000/v1/organizaciones/id
-**DELETE** http://localhost:3000/v1/organizaciones/id
+- **GET** http://localhost:3000/v1/organizaciones/
+- **POST** http://localhost:3000/v1/organizaciones/
+- **PUT** http://localhost:3000/v1/organizaciones/id
+- **DELETE** http://localhost:3000/v1/organizaciones/id
 
 
 
