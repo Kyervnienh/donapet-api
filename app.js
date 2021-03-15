@@ -47,7 +47,7 @@ var server = app.listen(process.env.PORT || 3000, function () {
       },
       servers: [
         {
-          url: "http://localhost:3000",
+          url: "https://donapet.herokuapp.com/",
         },
       ],
     },

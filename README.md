@@ -87,7 +87,7 @@ En el siguiente diagrama mostramos el modelo de entidadrelacion de nuestro proye
 
 <h2 align="center">Desarrollo del Proyecto</h2>
 
-[Donapet API](https://raquellvazquez.github.io/to-do/) lo desarrollamos utilizando diferentes tecnologías que a continuación describimos.
+[Donapet API](https://donapet.herokuapp.com/v1) lo desarrollamos utilizando diferentes tecnologías que a continuación describimos.
 
 
 - :bulb: **NodeJs**: es un entorno de ejecución de JavaScript back-end, multiplataforma y de código abierto que se ejecuta en el motor V8 y ejecuta código JavaScript fuera de un navegador web. 
@@ -160,7 +160,7 @@ Pasos:
     <p></p>
 </div>
 
-2. Crear una nueva solicitud **POST** agregar la ruta de la API (http:rutaaa) y agregar **/donaciones** como se muestra a continuación: 
+2. Crear una nueva solicitud **POST** agregar la ruta de la API (https://donapet.herokuapp.com/v1) y agregar **/donaciones** como se muestra a continuación: 
 
 <div align="center">
     <br>
@@ -212,7 +212,7 @@ Pasos:
     <p></p>
 </div>
 
-2. Crear una nueva solicitud **GET** agregar la ruta de la API (http:rutaaa) y agregar **/donaciones** como se muestra a continuación: 
+2. Crear una nueva solicitud **GET** agregar la ruta de la API (https://donapet.herokuapp.com/v1) y agregar **/donaciones** como se muestra a continuación: 
 
 <div align="center">
     <br>
@@ -242,7 +242,7 @@ Pasos:
     <p></p>
 </div>
 
-2. Crear una nueva solicitud **PUT** agregar la ruta de la API (http:rutaaa) y agregar **/donaciones/id** como se muestra a continuación: 
+2. Crear una nueva solicitud **PUT** agregar la ruta de la API (https://donapet.herokuapp.com/v1) y agregar **/donaciones/id** como se muestra a continuación: 
 
 <div align="center">
     <br>
@@ -292,7 +292,7 @@ Pasos:
     <p></p>
 </div>
 
-2. Crear una nueva solicitud **DELETE** agregar la ruta de la API (http:rutaaa) y agregar **/donaciones/id** como se muestra a continuación: 
+2. Crear una nueva solicitud **DELETE** agregar la ruta de la API (https://donapet.herokuapp.com/v1) y agregar **/donaciones/id** como se muestra a continuación: 
 
 <div align="center">
     <br>
@@ -309,25 +309,25 @@ Pasos:
 </div>
 
 
-**Nota:** en los ejemplos se muestra la ruta http://localhost:3000/v1/donaciones/ ya que se estaba probando de manera local, pero esta se debe cambiar por la siguiente ruta: http://localhost:3000/v1/donaciones/ 
+**Nota:** en los ejemplos se muestra la ruta http://localhost:3000/v1/donaciones/ ya que se estaba probando de manera local, pero esta se debe cambiar por la siguiente ruta: https://donapet.herokuapp.com/v1
 
 
 ### Anotaciones:
 
 Endpoint para la la tabla Usuarios:
 
-- **GET** http://localhost:3000/v1/usuarios/
-- **POST** http://localhost:3000/v1/usuarios/
-- **PUT** http://localhost:3000/v1/usuarios/id
-- **DELETE** http://localhost:3000/v1/usuarios/id
+- **GET** https://donapet.herokuapp.com/v1/usuarios/
+- **POST** https://donapet.herokuapp.com/v1/usuarios/
+- **PUT** https://donapet.herokuapp.com/v1/usuarios/id
+- **DELETE** https://donapet.herokuapp.com/v1/usuarios/id
 
 
 Endpoint para la la tabla Organizaciones:
 
-- **GET** http://localhost:3000/v1/organizaciones/
-- **POST** http://localhost:3000/v1/organizaciones/
-- **PUT** http://localhost:3000/v1/organizaciones/id
-- **DELETE** http://localhost:3000/v1/organizaciones/id
+- **GET** https://donapet.herokuapp.com/v1/organizaciones/
+- **POST** https://donapet.herokuapp.com/v1/organizaciones/
+- **PUT** https://donapet.herokuapp.com/v1/organizaciones/id
+- **DELETE** https://donapet.herokuapp.com/v1/organizaciones/id
 
 
 
