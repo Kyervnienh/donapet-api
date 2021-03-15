@@ -164,7 +164,7 @@ Pasos:
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/donacionesPOST.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/postman2.png" alt="entidad relacion" width="50%" height="70%" />
     <p></p>
 </div>
 
