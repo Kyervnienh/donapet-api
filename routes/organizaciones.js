@@ -3,10 +3,12 @@ const {
   crearOrganizacion,
   modificarOrganizacion,
   consultarOrganizacion,
+  consultarOrganizaciones,
   eliminarOrganizacion,
 } = require('../controllers/organizaciones');
 
-router.get('/', consultarOrganizacion);
+router.get('/', consultarOrganizaciones);
+router.get('/:id', consultarOrganizacion);
 router.post('/', crearOrganizacion);
 router.put('/:id', modificarOrganizacion);
 router.delete('/:id', eliminarOrganizacion);
