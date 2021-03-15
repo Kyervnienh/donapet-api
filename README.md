@@ -339,4 +339,19 @@ Endpoint para la la tabla Organizaciones:
 | kevin.kyervnienh@gmail.com |  Js.pineda.sa@gmail.com| raquelskrats@gmail.com |
 
 <br>
+
+## Swagger
+
+Para documentar nuestra API utilizamos la herramienta de Swager.
+
+Para poder visualizar la documentación solo es necesario entrar al siguiente enlace: https://donapet.herokuapp.com/api-docs.
+
+<div align="center">
+    <br>
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/develop/src/assets/DELETERESULT.png" alt="entidad relacion" width="50%" height="70%" />
+    <p></p>
+</div>
+
+
+
 <p align="center">THANK YOU FOR USING DONAPET API</p>
