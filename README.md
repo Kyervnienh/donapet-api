@@ -156,7 +156,7 @@ Pasos:
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/modelo_relacional.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/postman1.png" alt="entidad relacion" width="50%" height="70%" />
     <p></p>
 </div>
 
@@ -164,7 +164,7 @@ Pasos:
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/modelo_relacional.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/donacionesPOST.png" alt="entidad relacion" width="50%" height="70%" />
     <p></p>
 </div>
 
@@ -182,7 +182,7 @@ Es importante aclarar que no es necesario agregar el id de nuestra donación ya 
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/modelo_relacional.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/donacionesPOST.png" alt="entidad relacion" width="50%" height="70%" />
     <p></p>
 </div>
 
@@ -208,7 +208,7 @@ Pasos:
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/modelo_relacional.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/postman1.png" alt="entidad relacion" width="50%" height="70%" />
     <p></p>
 </div>
 
@@ -216,7 +216,7 @@ Pasos:
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/modelo_relacional.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/donacionesGET.png" alt="entidad relacion" width="50%" height="70%" />
     <p></p>
 </div>
 
@@ -224,7 +224,7 @@ Pasos:
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/modelo_relacional.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/donacionesGETResult.png" alt="entidad relacion" width="100%" height="70%" />
     <p></p>
 </div>
 
@@ -238,7 +238,7 @@ Pasos:
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/modelo_relacional.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/postman1.png" alt="entidad relacion" width="50%" height="70%" />
     <p></p>
 </div>
 
@@ -246,7 +246,7 @@ Pasos:
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/modelo_relacional.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/donacionesPUT.png" alt="entidad relacion" width="100%" height="70%" />
     <p></p>
 </div>
 
@@ -288,7 +288,7 @@ Pasos:
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/modelo_relacional.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/postman1.png" alt="entidad relacion" width="50%" height="70%" />
     <p></p>
 </div>
 
@@ -296,7 +296,7 @@ Pasos:
 
 <div align="center">
     <br>
-    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/modelo_relacional.png" alt="entidad relacion" width="50%" height="70%" />
+    <img src="https://raw.githubusercontent.com/Kyervnienh/donapet-api/feat/README/src/assets/donacionesDelete.png" alt="entidad relacion" width="100%" height="100%" />
     <p></p>
 </div>
 
