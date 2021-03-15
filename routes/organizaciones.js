@@ -23,13 +23,13 @@ const auth = require('./auth');
  *           type: string
  *           description: nombre de la organizacion
  *         direccion:
- *           type: integer
+ *           type: string
  *           description: dirección de la organización
  *         telefono:
  *           type: integer
  *           description: telefono de la organización
  *         representante:
- *           type: integer
+ *           type: string
  *           description: nombre del representante de la organización
  *         correo:
  *           type: string
