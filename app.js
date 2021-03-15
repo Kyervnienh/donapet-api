@@ -43,7 +43,7 @@ var server = app.listen(process.env.PORT || 3000, function () {
       info: {
         title: "DonaPet API",
         version: "1.0.0",
-        description: "PI para realizar donaciones a instituciones a cuidado de los animales",
+        description: "API para realizar donaciones a instituciones a cuidado de los animales",
       },
       servers: [
         {
