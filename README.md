@@ -339,4 +339,4 @@ Endpoint para la la tabla Organizaciones:
 | kevin.kyervnienh@gmail.com |  Js.pineda.sa@gmail.com| raquelskrats@gmail.com |
 
 <br>
-<p align="center">THANK YOU FOR USING TO DO LIST</p>
+<p align="center">THANK YOU FOR USING DONAPET API</p>
